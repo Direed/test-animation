@@ -1,0 +1,157 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+}
+
+.menu {
+  position: fixed;
+  top: 32px;
+  z-index: 6;
+  display: flex;
+  gap: 24px;
+}
+
+.firstSection {
+  position: fixed;
+  top: 50%;
+  left: 80px;
+  transform: translate(0, -50%);
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  max-width: 1630px;
+  width: 100%;
+}
+
+.firstSectionWrapper {
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  width: 100%;
+}
+
+.firstSection h1 {
+  font-size: 128px;
+  line-height: 128px;
+  background: -webkit-linear-gradient(#B53EA4, #FC6F32, #FF4A59);
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+
+}
+
+.firstSection p {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 400;
+
+}
+
+
+.companiesSection {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 6;
+  width: 100%;
+  gap: 48px;
+  bottom: -30%;
+  transform: translateY(30%);
+}
+
+.companiesSectionWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  gap: 48px;
+}
+
+.companiesSection p {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 78px;
+  text-align: center;
+}
+
+.companiesWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 120px;
+  height: 102px;
+  width: 100%;
+  justify-content: center;
+  transform: translateX(222px);
+}
+
+.companiesWrapperMotion {
+  display: flex;
+  align-items: center;
+  gap: 120px;
+  height: 102px;
+  width: 100%;
+  justify-content: center;
+}
+
+.crowdsourcingSection {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 6;
+  width: 100%;
+  max-width: 1149px;
+  bottom: -50%;
+  left: 80px;
+}
+
+.crowdsourcingSection h1 {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 70px;
+}
+
+.crowdsourcingSection p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.crowdsourcingSection button {
+  max-width: 377px;
+}
+
+.crowdsourcingSectionWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 32px;
+}
+
+.comet {
+  position: fixed;
+  width: 205px;
+  height: 2.5px;
+  rotate: 12.59deg;
+  opacity: 90%;
+  z-index: 6;
+  background: linear-gradient(77deg, rgba(70, 255, 244, 0) 0%, rgba(174, 255, 250, 1) 50%, rgba(70, 255, 244, 0) 100%);
+  top: 50%;
+  left: -30%;
+}
+
+.timelines {
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+}
+

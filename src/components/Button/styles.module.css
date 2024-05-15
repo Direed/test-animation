@@ -1,0 +1,41 @@
+.button {
+    padding: 22px 48px 24px 48px;
+    font-size: 24px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    /*border-image-slice: 1;*/
+    border-radius: 91px;
+    /*border-image-source: linear-gradient(180deg, rgba(150, 52, 136, 1), rgba(252, 111, 50, 1), rgba(255, 74, 89, 1));*/
+    /*border-image: linear-gradient(84deg, rgba(150, 52, 136, 1), rgba(252, 111, 50, 1), rgba(255, 74, 89, 1)) 1;*/
+    background:
+            linear-gradient(84deg, rgba(2, 4, 9, 1), rgba(2, 4, 9, 1), rgba(2, 4, 9, 1)) padding-box,
+            linear-gradient(84deg, rgba(150, 52, 136, 1), rgba(252, 111, 50, 1), rgba(255, 74, 89, 1)) border-box;
+}
+
+.button:hover {
+    background:
+            linear-gradient(84deg, rgba(150, 52, 136, 1), rgba(252, 111, 50, 1), rgba(255, 74, 89, 1)) padding-box,
+            linear-gradient(84deg, rgba(150, 52, 136, 1), rgba(252, 111, 50, 1), rgba(255, 74, 89, 1)) border-box;
+}
+
+.transparent {
+    padding: 22px 32px 24px 32px;
+    border: none;
+    background: transparent;
+}
+
+.transparent:hover {
+    border: none;
+    background: transparent;
+    background: -webkit-linear-gradient(-85deg, rgba(150, 52, 136, 1), rgba(252, 111, 50, 1), rgba(255, 74, 89, 1));
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+}
+
+.small.button {
+    padding: 14px 32px 16px 32px;
+}
+
+.small.transparent {
+    padding: 14px 24px 16px 24px;
+}

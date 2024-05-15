@@ -1,0 +1,24 @@
+.block {
+    background: linear-gradient(85deg, rgba(150, 52, 136, 0.2) 0%, rgba(252, 111, 50, 0.2) 50%, rgba(255, 74, 89, 0.2) 100%);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 91px;
+    max-width: 564px;
+    width: 100%;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 77.45px;
+    text-align: center;
+}
+
+.description {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+}
