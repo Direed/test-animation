@@ -1,0 +1,39 @@
+.button {
+    padding: 16px;
+    border-radius: 91px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 1);
+    min-width: 56px;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(180deg);
+}
+
+.button:hover {
+    border: 1px solid transparent;
+    background:
+            linear-gradient(84deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1)) padding-box,
+            linear-gradient(84deg, rgba(150, 52, 136, 1), rgba(252, 111, 50, 1), rgba(255, 74, 89, 1)) border-box;
+}
+
+.button path:nth-of-type(odd) {
+    display: initial !important;
+}
+
+.button path:nth-of-type(even) {
+    display: none;
+}
+
+.button:hover path:nth-of-type(odd) {
+    display: none;
+}
+
+.button:hover path:nth-of-type(even) {
+    display: initial;
+}
+
+.top {
+    transform: rotate(360deg);
+}

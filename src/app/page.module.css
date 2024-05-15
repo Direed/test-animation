@@ -151,6 +151,31 @@
   left: -30%;
 }
 
+.leaderboardSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 32px;
+}
+
+.leaderboardSection h1 {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 78px;
+}
+
+.leaderboardSection p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+.leaderboardTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .timelines {
   background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
 }

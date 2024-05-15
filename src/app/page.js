@@ -6,12 +6,14 @@ import Button from "@/components/Button";
 import {circOut, motion, useMotionTemplate, useScroll, useTransform} from "framer-motion";
 import {useEffect, useRef} from "react";
 import StatBlock from "@/components/StatBlock";
+import LeaderBoard from "@/components/LeaderBoard";
 
 
 export default function Home() {
     const refFirstSection = useRef(null);
     const refSecondSection = useRef(null);
     const refThirdSection = useRef(null);
+    const refLeaderBoardSection = useRef(null);
 
     const { scrollYProgress: scrollYProgressFirstSection } = useScroll({
         target: refFirstSection,
@@ -25,6 +27,11 @@ export default function Home() {
 
     const { scrollYProgress: scrollYProgressThirdSection } = useScroll({
         target: refThirdSection,
+        offset: ["start end", "end end"]
+    })
+
+    const { scrollYProgress: scrollYProgressLeaderBoardSection } = useScroll({
+        target: refLeaderBoardSection,
         offset: ["start end", "end end"]
     })
 
@@ -175,6 +182,34 @@ export default function Home() {
     });
 
 
+    //translate moon icon leader board section
+    const translateMoonIconLeaderBoardSection = useTransform(scrollYProgressLeaderBoardSection, [1, 0], ['-55%', '0%'],{
+        ease: circOut
+    });
+    const translateYThirdSectionBeforeBoardSection = useTransform(scrollYProgressLeaderBoardSection, [1, 0], ['-300%', '0%'],{
+        ease: circOut
+    });
+    const opacityThirdSectionBeforeBoardSection = useTransform(scrollYProgressLeaderBoardSection, [1, 0], [0, 1],{
+        ease: circOut
+    });
+    const translateYVectorsBeforeBoardSection = useTransform(scrollYProgressLeaderBoardSection, [1, 0], ['-60vh', '0%'],{
+        ease: circOut
+    });
+    const translateXVectorsBeforeBoardSection = useTransform(scrollYProgressLeaderBoardSection, [1, 0], ['-100vh', '0%'],{
+        ease: circOut
+    });
+    const rotateVectorsBeforeBoardSection = useTransform(scrollYProgressLeaderBoardSection, [1, 0], ['45deg', '0deg'],{
+        ease: circOut
+    });
+    const translateYBoardSection = useTransform(scrollYProgressLeaderBoardSection, [1, 0], ['-95vh', '0'],{
+        ease: circOut
+    });
+    const opacityBoardSection = useTransform(scrollYProgressLeaderBoardSection, [1, 0], [1, 0],{
+        ease: circOut
+    });
+
+
+
 
     useEffect(() => {
         history.scrollRestoration = "manual"
@@ -224,6 +259,21 @@ export default function Home() {
                     <motion.div className={styles.companiesWrapper} style={{translateX: translateArrakisImagesSection}}>
                         <motion.div className={styles.companiesWrapperMotion} style={{translateX: translateArrakisImagesSectionBeforeThird}}>
                             <Image
+                                src={'/images/solana.svg'}
+                                width={334}
+                                height={50}
+                            />
+                            <Image
+                                src={'/images/arweave.svg'}
+                                width={421}
+                                height={100}
+                            />
+                            <Image
+                                src={'/images/bittensor.svg'}
+                                width={328}
+                                height={58}
+                            />
+                            <Image
                                 src={'/images/redcircle.svg'}
                                 width={102}
                                 height={102}
@@ -263,13 +313,33 @@ export default function Home() {
                                 width={334}
                                 height={50}
                             />
+                            <Image
+                                src={'/images/arweave.svg'}
+                                width={421}
+                                height={100}
+                            />
+                            <Image
+                                src={'/images/bittensor.svg'}
+                                width={328}
+                                height={58}
+                            />
+                            <Image
+                                src={'/images/redcircle.svg'}
+                                width={102}
+                                height={102}
+                            />
+                            <Image
+                                src={'/images/telegram.svg'}
+                                width={102}
+                                height={102}
+                            />
                         </motion.div>
                     </motion.div>
                 </motion.div>
             </motion.div>
 
             <motion.div className={styles.crowdsourcingSection} style={{translateY: translateThirdSection, opacity: opacityThirdSection}}>
-                <motion.div className={styles.crowdsourcingSectionWrapper}>
+                <motion.div className={styles.crowdsourcingSectionWrapper} style={{translateY: translateYThirdSectionBeforeBoardSection, opacity: opacityThirdSectionBeforeBoardSection}}>
                     <h1>Crowdsourcing our collective intelligence to build the best AI</h1>
                     <p>Open source AI has been lagging behind the likes of Google and OpenAI by billions of dollars.</p>
                     <p>Salt aims to solve that by rewarding open source developers who contribute to the democratization of AI. We run competitions between AI models to find and reward the best AI models. As a result, our users will be able to access the latest cutting edge AI models.</p>
@@ -284,12 +354,13 @@ export default function Home() {
                     style={{position: 'fixed', width: 1016, height: 1016, right:0, zIndex: 3, bottom: bottomMoonIconSecondSection, translateY: translateMoonIconSecondSection}}
                 >
                     <motion.div style={{translateY: translateMoonIconThirdSection}}>
-                        <motion.img
-                            // style={{ position: 'fixed', right: 0, bottom: bottomMoonIcon, zIndex: 3, translateY: translateMoonIcon}}
-                            src={'/images/moon.png'}
-                            width={1016}
-                            height={1016}
-                        />
+                        <motion.div style={{translateY: translateMoonIconLeaderBoardSection}}>
+                            <motion.img
+                                src={'/images/moon.png'}
+                                width={1016}
+                                height={1016}
+                            />
+                        </motion.div>
                     </motion.div>
                 </motion.div>
             </motion.div>
@@ -300,33 +371,38 @@ export default function Home() {
 
 
             <motion.div style={{ position: 'fixed', left: '-15%', bottom: '-45%', zIndex: 4, translateY: 0, rotate: rotateRedVector}}>
-                <motion.img
-                    style={{ translateY: translateYRedVectorArrakis, translateX: translateXRedVectorArrakis}}
-                    src={'/images/vectorRed.svg'}
-                />
+                <motion.div style={{translateY: translateYVectorsBeforeBoardSection, translateX: translateXVectorsBeforeBoardSection, rotate: rotateVectorsBeforeBoardSection}}>
+                    <motion.img
+                        style={{ translateY: translateYRedVectorArrakis, translateX: translateXRedVectorArrakis}}
+                        src={'/images/vectorRed.svg'}
+                    />
+                </motion.div>
             </motion.div>
 
             <motion.div style={{ position: 'fixed', left: '20%', top: '-35%', zIndex: 4, translateY: 0, rotate: rotateBlueVector}}>
-                <motion.img
-                    style={{ rotate: rotateBlueVectorArrakis, translateY: translateYBlueVectorArrakis}}
-                    src={'/images/vectorBlue.svg'}
-                />
+                <motion.div style={{translateY: translateYVectorsBeforeBoardSection, translateX: translateXVectorsBeforeBoardSection, rotate: rotateVectorsBeforeBoardSection}}>
+                    <motion.img
+                        style={{ rotate: rotateBlueVectorArrakis, translateY: translateYBlueVectorArrakis}}
+                        src={'/images/vectorBlue.svg'}
+                    />
+                </motion.div>
             </motion.div>
 
-            <div>
-
-            </div>
+            <motion.div className={styles.leaderboardSection} style={{position: 'fixed', top: '100vh', zIndex: 6, maxWidth: 1760, width: '100%', translateY: translateYBoardSection, opacity: opacityBoardSection}}>
+                <div className={styles.leaderboardTitle}>
+                    <h1>LLM Leaderboard</h1>
+                    <Button>Submit your model</Button>
+                </div>
+                <p>We evaluate LLMs on key benchmarks using the Eleuther AI, a framework to test LLMs on a large number of different evaluation tasks. The higher the score, the better the LLM.</p>
+                <LeaderBoard />
+            </motion.div>
 
             <div className={styles.timelines} style={{position: "absolute", width: '100%'}}>
                 <div style={{height: '100vh'}}></div>
                 <div ref={refFirstSection} style={{height: '100vh'}}></div>
                 <div ref={refSecondSection} style={{height: '100vh'}}></div>
                 <div ref={refThirdSection} style={{height: '100vh'}}></div>
-                <div style={{height: '100vh'}}></div>
-                <div style={{height: '100vh'}}></div>
-                <div style={{height: '100vh'}}></div>
-
-
+                <div ref={refLeaderBoardSection} style={{height: '100vh'}}></div>
             </div>
         </main>
     );

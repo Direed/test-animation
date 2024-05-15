@@ -1,0 +1,48 @@
+.row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 24px;
+    background: rgba(201, 217, 255, 0.08);
+}
+
+.row.transparent {
+    background: none;
+}
+
+.row p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    width: 100%;
+    text-align: right;
+}
+
+.number {
+    min-width: 32px;
+    max-width: 32px;
+    text-align: center !important;
+}
+
+.modelName {
+    min-width: 326px;
+    max-width: 326px;
+    text-align: left !important;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 24px 24px 24px 60px;
+}
+
+.header p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    width: 100%;
+    text-align: right;
+}
