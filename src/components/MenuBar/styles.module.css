@@ -1,0 +1,7 @@
+.menu {
+    position: fixed;
+    top: 32px;
+    z-index: 6;
+    display: flex;
+    gap: 24px;
+}
